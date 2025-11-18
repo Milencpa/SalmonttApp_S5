@@ -1,0 +1,5 @@
+SusieSalmon;Chiloé Norte;1800
+ComoElPez;Punta Arenas Sur;650
+PezDorado;Puerto Montt Interior;920
+SalmoneraSalmones;Aysén Oeste;3100
+Blumón;Chiloé Sur;2300

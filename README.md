@@ -24,7 +24,7 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 
 ⚙️ Instrucciones para clonar y ejecutar el proyecto
 - Clona el repositorio desde GitHub:
-git clone https://github.com/Milencpa/semana3poo1duocuc.git
+git clone https://github.com/Milencpa/semana3poo1duocuc.git](https://github.com/Milencpa/SalmonttApp_S4.git
 - Abre el proyecto en IntelliJ IDEA.
 - Verifica que los archivos .txt estén correctamente ubicados.
 - Ejecuta el archivo Main.java desde el paquete app.

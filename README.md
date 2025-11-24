@@ -24,11 +24,11 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 
 ⚙️ Instrucciones para clonar y ejecutar el proyecto
 - Clona el repositorio desde GitHub:
-git clone https://github.com/Milencpa/SalmonttApp_S4.git
+git clone https://github.com/Milencpa/SalmonttApp_S5.git
 - Abre el proyecto en IntelliJ IDEA.
 - Verifica que los archivos .txt estén correctamente ubicados.
 - Ejecuta el archivo Main.java desde el paquete app.
 - Sigue las instrucciones en consola o en la interfaz gráfica (si corresponde).
 
 
-Repositorio GitHub: [https://github.com/Milencpa/SalmonttApp_S4] Fecha de entrega: [24/11/2025]
+Repositorio GitHub: [https://github.com/Milencpa/SalmonttApp_S5] Fecha de entrega: [24/11/2025]

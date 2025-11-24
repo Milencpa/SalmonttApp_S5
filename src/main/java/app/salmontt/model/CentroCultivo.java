@@ -5,20 +5,22 @@ package app.salmontt.model;
  */
 public class CentroCultivo {
     // Atributos
-    private String nombre;
+    private String nombreCentro;
     private String ubicacion;
-    private int produccionAnualKg; // Producción en Kilogramos
+    private int produccionAnualKg;
+    private Persona encargado;
 
     // Constructor
-    public CentroCultivo(String nombre, String ubicacion, int produccionAnualKg) {
-        this.nombre = nombre;
+    public CentroCultivo(String nombreCentro, String ubicacion, int produccionAnualKg, Persona encargado) {
+        this.nombreCentro = nombreCentro;
         this.ubicacion = ubicacion;
-        this.produccionAnualKg = produccionAnualKg;
+        this.setProduccionAnualKg(produccionAnualKg);
+        this.encargado = encargado;
     }
 
     // Getters
     public String getNombre() {
-        return nombre;
+        return nombreCentro;
     }
 
     public String getUbicacion() {
@@ -29,9 +31,13 @@ public class CentroCultivo {
         return produccionAnualKg;
     }
 
+    public Persona getEncargado() {
+        return encargado;
+    }
+
     // Setters
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String nombreCentro) {
+        this.nombreCentro = nombreCentro;
     }
 
     public void setUbicacion(String ubicacion) {
@@ -39,7 +45,15 @@ public class CentroCultivo {
     }
 
     public void setProduccionAnualKg(int produccionAnualKg) {
+        if (produccionAnualKg < 0) {
+                throw new IllegalArgumentException("La producción anual no puede ser negativa.");
+            }
         this.produccionAnualKg = produccionAnualKg;
+        }
+
+
+    public void setEncargado(Persona encargado) {
+        this.encargado = encargado;
     }
 
     /**
@@ -47,10 +61,10 @@ public class CentroCultivo {
      */
     @Override
     public String toString() {
-        return "CentroCultivo{" +
-                "nombre='" + nombre + '\'' +
-                ", ubicacion='" + ubicacion + '\'' +
-                ", produccionAnualKg=" + produccionAnualKg + " kg" +
-                '}';
+        return "CENTRO DE CULTIVO= " +
+                "Nombre: " + nombreCentro +
+                ", Ubicacion: " + ubicacion +
+                ", Produccion Anual (Kg): " + produccionAnualKg +
+                ", Encargado: [" + encargado + "].";
     }
 }

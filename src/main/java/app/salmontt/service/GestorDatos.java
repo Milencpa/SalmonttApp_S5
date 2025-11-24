@@ -1,6 +1,7 @@
-package app.salmontt.data;
+package app.salmontt.service;
 
 import app.salmontt.model.CentroCultivo;
+import app.salmontt.model.Persona;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -37,16 +38,25 @@ import java.util.Scanner;
                     String[] datos = linea.split(";");
 
                     // Asegura que la línea tenga el número correcto de campos
-                    if (datos.length == 3) {
+                    if (datos.length == 6) {
                         try {
                             // Extrae y convierte los datos
                             String nombre = datos[0].trim();
                             String ubicacion = datos[1].trim();
+
                             // Convierte la producción a entero
                             int produccionAnualKg = Integer.parseInt(datos[2].trim());
 
+                            // Extraer datos del objeto Persona
+                            String rut = datos[3].trim();
+                            String nombrePersona = datos[4].trim();
+                            String apellidoPersona = datos[5].trim();
+
+                            // Crear objeto Persona
+                            Persona encargado = new Persona(rut, nombrePersona, apellidoPersona);
+
                             // Crea un nuevo objeto CentroCultivo
-                            CentroCultivo centro = new CentroCultivo(nombre, ubicacion, produccionAnualKg);
+                            CentroCultivo centro = new CentroCultivo(nombre, ubicacion, produccionAnualKg, encargado);
 
                             // Almacena el objeto en el ArrayList
                             centros.add(centro);

@@ -1,15 +1,16 @@
-package app.salmontt.ui;
+package app.salmontt.app;
 
-import app.salmontt.data.GestorDatos;
+import app.salmontt.service.GestorDatos;
 import app.salmontt.model.CentroCultivo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 // Clase principal que ejecuta la aplicación
 public class Main {
     public static void main(String[] args) {
-        System.out.println("..: SalmonttApp - Gestión de Centros de Cultivo :..");
+        System.out.println("..: SALMONTTAPP - Gestión de Centros de Cultivo :..");
 
         // Carga de datos
         GestorDatos gestor = new GestorDatos();
@@ -37,6 +38,14 @@ public class Main {
             }
         }
 
+        System.out.println("3. Búsqueda por Nombre");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese Nombre de Centro que desea buscar: ");
+        String nombreBuscado = sc.nextLine();
+
+        buscarCentroPorNombre(centrosDeCultivo, nombreBuscado);
+
+
         System.out.println("Proceso finalizado");
     }
 
@@ -60,4 +69,21 @@ public class Main {
         }
         return filtrados;
     }
+
+    // Búsqueda de Centros por nombre
+    public static void buscarCentroPorNombre(List<CentroCultivo> centros, String nombre) {
+        boolean encontrado = false;
+
+        for (CentroCultivo centro : centros) {
+            if (centro.getNombre().equalsIgnoreCase(nombre)) {
+                System.out.println(centro);
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("No se encontró este Centro. Por favor intente con otra búsqueda.");
+        }
+    }
+
 }

@@ -3,25 +3,21 @@ package app.salmontt.model;
 /**
  * Representa un Centro de Cultivo con sus datos principales.
  */
-public class CentroCultivo extends UnidadOperativa{
-    private int produccionAnualKg;
+public class CentroCultivo extends Entidad{
+    private String ubicacion;
 
-    public CentroCultivo(String nombre, String comuna, int produccionAnualKg) {
-        super(nombre, comuna);
-        this.produccionAnualKg = produccionAnualKg;
+    public CentroCultivo(String id, String nombre, String ubicacion) {
+        super(id, nombre);
+        this.ubicacion = ubicacion;
     }
-
-    public int getProduccionAnualKg() {
-        return produccionAnualKg;
+    public String getUbicacion() {
+        return ubicacion;
     }
-
-    public void setProduccionAnualKg(int produccionAnualKg) {
-        this.produccionAnualKg = produccionAnualKg;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
-
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Producción Anual (kg): " + produccionAnualKg);
+    public void mostrarResumen() {
+        System.out.println("Centro de Cultivo - ID: " + id + ", Nombre: " + nombre + ", Ubicación: " + ubicacion);
     }
 }

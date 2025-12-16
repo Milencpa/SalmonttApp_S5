@@ -1,5 +1,5 @@
-SusieSalmon;Chiloé Norte;1800;12876345-1;Daniela;Araos
-ComoElPez;Punta Arenas Sur;650;18765432-0;Matias;Gonzalez
-PezDorado;Puerto Montt Interior;920;24321678-9;Camila;Fernandez
-SalmoneraSalmones;Aysén Oeste;3100;27654321-2;Sofia;Ramirez
-Blumón;Chiloé Sur;2300;13456789-3;Lucas;Vargas
+12876345;SusieSalmon;Chiloé Norte;1800;Acuicultura
+18765432;ComoElPez;Punta Arenas Sur;650;Investigación
+24321678;PezDorado;Puerto Montt Interior;920;Acuicultura
+27654321;SalmoneraSalmones;Aysén Oeste;3100;Exportación
+13456789;Blumón;Chiloé Sur;2300;Proveedores

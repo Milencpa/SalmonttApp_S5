@@ -1,24 +1,23 @@
 package app.salmontt.model;
 
-public class PlantaProceso extends UnidadOperativa{
-    private String capacidadProceso;
+public class PlantaProceso extends Entidad {
+    private int capacidadDiariaToneladas;
 
-    public PlantaProceso(String nombre, String comuna, String capacidadProceso) {
-        super(nombre, comuna);
-        this.capacidadProceso = capacidadProceso;
+    public PlantaProceso(String id, String nombre, String ubicacion, int capacidadDiariaToneladas) {
+        super(id, nombre);
+        this.capacidadDiariaToneladas = capacidadDiariaToneladas;
     }
 
-    public String getCapacidadProceso() {
-        return capacidadProceso;
+    public int getCapacidadDiariaToneladas() {
+        return capacidadDiariaToneladas;
     }
 
-    public void setCapacidadProceso(String capacidadProceso) {
-        this.capacidadProceso = capacidadProceso;
+    public void setCapacidadDiariaToneladas(int capacidadDiariaToneladas) {
+        this.capacidadDiariaToneladas = capacidadDiariaToneladas;
     }
 
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Capacidad de Proceso: " + capacidadProceso);
+    public void mostrarResumen() {
+        System.out.println("Planta de Proceso - ID: " + id + ", Nombre: " + nombre + ", Capacidad Diaria (toneladas): " + capacidadDiariaToneladas);
     }
 }
